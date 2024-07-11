@@ -1,0 +1,114 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 1 1, 1, LIC=ATTQ1-CXV77-45GT5-GM18C-B0KQU-J2N46
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.38.0.0
+Toolchain Path:  G:\KeilFile\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.19
+Assembler:       Armasm.exe V6.19
+Linker/Locator:  ArmLink.exe V6.19
+Library Manager: ArmAr.exe V6.19
+Hex Converter:   FromElf.exe V6.19
+CPU DLL:         SARMCM3.DLL V5.38.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      Segger\JL2CM3.dll V2.99.42.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+g:\KeilProject File\stm32_project\SCP_CPP\USER\Template.uvprojx
+Project File Date:  06/29/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.19', folder: 'G:\KeilFile\ARM\ARMCLANG\Bin'
+*** Warning: You are compiling one or more files of source type C++ and have selected 'use MicroLIB'. MicroLIB does not support C++!
+  
+Build target 'Template'
+Note: source file '..\Lib\lib.h' - object file renamed from '..\OBJ\lib.o' to '..\OBJ\lib_1.o'.
+main.cpp(17): warning: In file included from...
+../Lib\lib.h(93): warning: anonymous non-C-compatible type given name for linkage purposes by typedef declaration; add a tag name here [-Wnon-c-typedef-for-linkage]
+typedef struct
+              ^
+               PID
+../Lib\lib.h(109): note: type is not C-compatible due to this default member initializer
+    float error=target_value-current_value;
+                ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Lib\lib.h(117): note: type is given name 'PID' for linkage purposes by this typedef declaration
+}PID;
+ ^
+../Lib\lib.h(109): warning: field 'target_value' is uninitialized when used here [-Wuninitialized]
+    float error=target_value-current_value;
+                ^
+main.cpp(84): note: in implicit default constructor for 'PID' first required here
+        PID pid;
+            ^
+../Lib\lib.h(93): note: during field initialization in the implicit default constructor
+typedef struct
+        ^
+../Lib\lib.h(109): warning: field 'current_value' is uninitialized when used here [-Wuninitialized]
+    float error=target_value-current_value;
+                             ^
+../Lib\lib.h(93): note: during field initialization in the implicit default constructor
+typedef struct
+        ^
+main.cpp(129): warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+                OLED_ShowChinese(0,0,"<B5><B1>前<BD>嵌<C8>");
+                                      ^~~~~~~~ ~~~~ ~~~~
+main.cpp(129): warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+                OLED_ShowChinese(0,0,"<B5><B1>前<BD>嵌<C8>");
+                                     ^
+main.cpp(130): warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+                OLED_Printf(64,0,OLED_8X16,":%4d",int32_t(angle));
+                                           ^
+main.cpp(131): warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+                OLED_Printf(0,16,OLED_8X16,"PWM:%4d",TIMOCAdder->TIM_Pulse);
+                                           ^
+main.cpp(132): warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+                OLED_ShowChinese(0,32,"指<B6><A8><BD>嵌<C8>");
+                                       ^~~~~~~~~~~~ ~~~~
+main.cpp(132): warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+                OLED_ShowChinese(0,32,"指<B6><A8><BD>嵌<C8>");
+                                      ^
+main.cpp(133): warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+                OLED_Printf(64,32,OLED_8X16,":%2d",(uint16_t)pid.target_value); 
+                                            ^
+main.cpp(135): warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+                OLED_Printf(0,48,OLED_8X16,"key:%4d",key_sign);
+                                           ^
+11 warnings generated.
+compiling main.cpp...
+linking...
+Program Size: Code=30460 RO-data=3236 RW-data=96 ZI-data=2592  
+FromELF: creating hex file...
+"..\OBJ\Template.axf" - 0 Error(s), 11 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.15.0.pack
+                Keil.STM32F4xx_DFP.2.15.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_Template
+  G:/KeilFile/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  G:/KeilFile/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
